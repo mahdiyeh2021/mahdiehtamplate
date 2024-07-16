@@ -1,0 +1,2 @@
+# mahdiehtamplate
+for wordpress template
