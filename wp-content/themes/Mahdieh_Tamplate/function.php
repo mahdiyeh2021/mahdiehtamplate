@@ -29,3 +29,13 @@ if ( ! function_exists( 'MahdiehTemplate_support' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'MahdiehTemplate_support' );
+function  my_theme_enqueue_styles() {
+	/* style bootstrap */
+	wp_enqueue_style( 'bootstrap-css',  get_template_directory_uri() .'assets/css/bootstrap.min.css' );
+	/* font css bootstrap */
+	wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() .'assets/css/font-awesome.min.css' );
+	/* js bootstrap*/
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), null, true );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
